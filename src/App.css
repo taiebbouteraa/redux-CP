@@ -1,38 +1,60 @@
-.App {
+/*----------Add To Do (start)----------*/
+
+.add-bar {
+  max-width: 75%;
+  text-align: center;
+  margin: 50px auto 20px ;
+}
+
+/*----------Add To Do (end)----------*/
+/*--------------------------------------------------------------------------------------*/
+/*----------Filter buttons (start)----------*/
+.filter-btns{
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin : 50px auto;
+}
+.filter-btn{
+  margin: auto 10px;
+}
+/*----------Filter buttons (end)----------*/
+/*--------------------------------------------------------------------------------------*/
+/*----------My To Dos (start)----------*/
+
+.done{
+  text-decoration: line-through;
+}
+.bt{
+  margin: 0px 2.5px;
+}
+.task{
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-buttons{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-content: center;
+}
+/*----------My To Dos (end)----------*/
+/*-----------------------------------------------------------------*/
+/*----------modal (start)----------*/
+#modal-btns{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 auto;
+}
+#modal-lable{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+/*----------modal (end)----------*/
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
