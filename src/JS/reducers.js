@@ -33,14 +33,14 @@ const reducers = (state = inisialState, { type, payload }) => {
             return {
                 ...state, myTasks: [...state.myTasks, payload]
             }
-        case FILTER_DONE:
-            return {
-                ...state, myTasks: state.myTasks.filter((el) => el.isDone === true)
-            }
-        case FILTER_NOT_DONE:
-            return {
-                ...state, myTasks: state.myTasks.filter((el) => el.isDone === false)
-            }
+        // case FILTER_DONE:
+        //     return {
+        //         ...state, myTasks: state.myTasks.filter((el) => el.isDone === true)
+        //     }
+        // case FILTER_NOT_DONE:
+        //     return {
+        //         ...state, myTasks: state.myTasks.filter((el) => el.isDone === false)
+        //     }
         // case FILTER_ALL:
         //     return {
         //         ...state, myTasks: state.myTasks.push(...state.myTasks, state.myTasks.isDone === false)

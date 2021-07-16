@@ -32,18 +32,23 @@ const ListTask = () => {
     }
     const [newDescription, setNewDescription] = useState('')
     const handleEdit = (e) => setNewDescription(e.target.value)
+    //-------------------------filter start---------------------
+    const [done, setDone] = useState(false)
 
-
-
+    let list = myTasks.map((el) => (<Task task={el} key={el.id} handleModal={openModal} />))
+    if (done === false) {
+        list = list
+    } else {
+        list = myTasks.map((el) => (<Task task={el} key={el.id} handleModal={openModal} />)).filter((x) => x.props.task.isDone === true)
+    }
+    //-------------------------filter end-----------------------
     return (
         <>
             <div>
                 <div className='filter-btns'>
-                    {/* <Button className='filter-btn' onClick={() => dispatch(filterAll())} >Reset</Button> */}
-                    <Button className='filter-btn' onClick={() => dispatch(filterDone())}>Completed</Button>
-                    <Button className='filter-btn' onClick={() => dispatch(filterNotDone())} >Incomplete</Button>
+                    <Button className='filter-btn' onClick={() => setDone(!done)}>{done ? 'Show all' : 'Completed'}</Button>
                 </div>
-                {myTasks.map((el) => (<Task task={el} key={el.id} handleModal={openModal} />))}
+                {list}
             </div>
 
             {/* modal */}
