@@ -1,4 +1,4 @@
-import { ADDTASK, COMPLETETASK, DELETETASK, EDITTASK, FILTER_ALL, FILTER_DONE, FILTER_NOT_DONE } from "./actionTypes";
+import { ADDTASK, COMPLETETASK, DELETETASK, EDIT, FILTER_ALL, FILTER_DONE, FILTER_NOT_DONE } from "./actionTypes";
 
 export const deleteTask = (id) => {
     return {
@@ -18,10 +18,10 @@ export const taskComplete = (id) => {
         payload: id,
     }
 }
-export const editTask = (description) => {
+export const editTask = (editedTask) => {
     return {
-        type: EDITTASK,
-        payload: description,
+        type: EDIT,
+        payload: editedTask,
     }
 }
 

@@ -1,5 +1,4 @@
-import Task from "../components/Task"
-import { ADDTASK, COMPLETETASK, DELETETASK, EDITTASK, FILTER_ALL, FILTER_DONE, FILTER_NOT_DONE } from "./actionTypes"
+import { ADDTASK, COMPLETETASK, DELETETASK, EDIT } from "./actionTypes"
 
 const inisialState = {
     myTasks: [{
@@ -33,21 +32,9 @@ const reducers = (state = inisialState, { type, payload }) => {
             return {
                 ...state, myTasks: [...state.myTasks, payload]
             }
-        // case FILTER_DONE:
-        //     return {
-        //         ...state, myTasks: state.myTasks.filter((el) => el.isDone === true)
-        //     }
-        // case FILTER_NOT_DONE:
-        //     return {
-        //         ...state, myTasks: state.myTasks.filter((el) => el.isDone === false)
-        //     }
-        // case FILTER_ALL:
-        //     return {
-        //         ...state, myTasks: state.myTasks.push(...state.myTasks, state.myTasks.isDone === false)
-        //     }
-        case EDITTASK:
+        case EDIT:
             return {
-                ...state, myTasks: state.myTasks.map((el) => el.description)
+                ...state, myTasks: state.myTasks.map((el) => (el.id === payload.id ? payload : el))
             }
 
 

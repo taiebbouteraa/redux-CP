@@ -13,7 +13,7 @@ const Addtask = () => {
             id: Math.random(),
             description: newTodo,
             isDone: false,
-        }), setNewTodo('')) : console.log(1)
+        }), setNewTodo('')) : alert('Type a To do')
     }
 
     return (
