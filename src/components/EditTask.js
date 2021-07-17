@@ -23,7 +23,7 @@ const EditTask = ({ task }) => {
     const edit = (newText) => {
         const editedTask = {
             id: task.id,
-            action: newText,
+            description: newText,
             isDone: task.isDone,
         };
         dispatch(editTask(editedTask));
@@ -43,7 +43,6 @@ const EditTask = ({ task }) => {
         <>
             <Button className='bt' onClick={() => openModal()} >Edit</Button>
             <Modal
-
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 style={customStyles}
